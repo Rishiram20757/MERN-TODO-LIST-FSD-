@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #0288d1, #0288d1, #00bcd4, #001f3d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Buttons */
+.button {
+  margin: 10px;
+  padding: 14px 24px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #001f3d, #0056b3);
+  border: none;
+  cursor: pointer;
+  width: 140px;
+  border-radius: 12px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #0056b3, #001f3d);
+  transform: scale(1.08);
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button.selected {
+  background: #0056b3;
+  color: white;
+}
+
+.button.clear {
+  float: right;
+  background-color: red !important; /* Direct red background */
+  background: red !important; /* Override any inherited gradient */
+  color: white;
+  width: 140px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button.clear:hover {
+  background-color: darkred !important; /* Dark red on hover */
+  transform: scale(1.05);
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+input {
+  font-size: 20px;
+  color: #2c3e50;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #0056b3;
+  padding: 10px;
+  background: transparent;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #6c6777;
+}
+
+input:focus {
+  border-bottom: 3px solid #0288d1;
+}
+
+/* Tasks */
+.task {
+  background-color: #34495e;
+  padding: 22px;
+  margin: 8px;
+  list-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.task span {
+  color: white;
+}
+
+.icon {
+  float: right;
+  margin-right: 20px;
+}
+
+article {
+  display: grid;
+}
+header h1 {
+  font-family: 'impact', sans-serif;
+  font-size: 3rem; 
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
